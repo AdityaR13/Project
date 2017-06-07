@@ -1,0 +1,37 @@
+DATA FIELD DESCRIPTION -- PREMIUM ECONOMY VS ECONOMY
+ 
+VARIABLE                               UNITS                                     MEANING
+AIRLINE                                Text                             Denotes the name of the B
+                                                                        AirlineThere are 6 airlines in the data:
+                                                                        British Airways
+                                                                        Delta Airlines
+                                                                        Air France
+                                                                        Singapore Airlines
+                                                                        Virgin Airlines
+                                                                        Jet Airways
+AIRCRAFT                               Number                           Dummy Variable for the Manufacturer of the Airplane / Aircraft
+                                                                         ‘0’ Boing; ‘1’ Airbus; ‘2’ others
+MONTH                                  Number                           Dummy variable indicating the month of the travel date
+                                                                        e.g. ‘0’ July;‘1’ August; ‘2’ September; ‘3’ October
+FLIGHT_DURATION                        Hours                            Flight Duration
+INTERNATIONAL                          Boolean                          ‘1’ International Flight; ‘0’ Domestic Flight 
+                                                                         w.r.t. Airlines' Home Country
+SEATS_ECONOMY                          Number                           Number of Economy Seats in the Aircraft
+SEATS_PREMIUM                          Number                           Number of Premium Economy Seats in the Aircraft
+SEATS_BUSINESS                         Number                           Number of Business Class Seats in the Aircraft
+PITCH_ECONOMY                          Inches                           Distance between two consecutive Economy Seats
+PITCH_PREMIUM                          Inches                           Distance between two consecutive Premium Economy Seats
+WIDTH_ECONOMY                          Inches                           Width between armrests of an Economy Seat
+WIDTH_PREMIUM                          Inches                           Width between armrests of a Premium Economy Seat
+PRICE_ECONOMY                          USD                              Price of Economy Seat
+PRICE_PREMIUM                          USD                              Price of Premium Economy Seat
+PRICE_BUSINESS                         USD                              Price of Business Class Seat
+QUALITY                                Inches                           Quality Difference between Premium Seat and Economy Seat 
+                                                                        measured as the difference in legroom
+PRICE_RELATIVE                                                         (PRICE_PREMIUM - PRICE_ECONOMY) / PRICE_ECONOMY
+WIDTH_RELATIVE                                                         (WIDTH_PREMIUM - WIDTH_ECONOMY) / WIDTH_ECONOMY
+PITCH_RELATIVE                                                         (PITCH_PREMIUM - PITCH_ECONOMY) / PITCH_ECONOMY
+N                                                                       Total Seats (SEATS_ECONOMY + SEATS_PREMIUM)
+LAMBDA                                                                   SEATS_PREMIUM / N
+ 
+ 
